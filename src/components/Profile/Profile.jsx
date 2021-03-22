@@ -1,5 +1,6 @@
 //RCC выбрать структуру
 import React from 'react';
+import MyPosts from './MyPosts/MyPosts'
 
 const Profile = () => {
 	return (
@@ -15,13 +16,7 @@ const Profile = () => {
 						/>
 						description
 					</div>
-					<div className="col-12 col-lg-10 section__content">
-						<div>myPost</div>
-						<div>newPost</div>
-						<div>post 1</div>
-						<div>post 2</div>
-						<div>post 3</div>
-					</div>
+					<MyPosts />
 				</div>
 			</div>
 

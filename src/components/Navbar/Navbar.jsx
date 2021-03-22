@@ -1,6 +1,12 @@
 //RCC выбрать структуру
 import React from 'react';
 
+// import styleUnique from './Navbar.module.sass';
+// let styleUnique = {
+// 	'navbar-nav': 'navbar-nav__afsdfsdfsd',
+// 	'nav-item': 'nav-item__aafsdfsdfsd'
+// }
+
 const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
