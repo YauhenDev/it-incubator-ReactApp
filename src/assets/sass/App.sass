@@ -1,0 +1,45 @@
+@import "vars"
+
+a
+	color: $blue
+	text-decoration: none
+	background-image: linear-gradient(currentColor, currentColor)
+	background-position: 0 100%
+	background-repeat: no-repeat
+	background-size: 0 1px
+	transition: background-size .7s !important
+	&:hover
+		color: $cyan
+		text-decoration: none
+		background-size: 100% 1px
+	&.btn
+		text-decoration: none
+		font-size: 1rem
+		padding: 1rem
+		min-width: 237px
+		background-size: 0
+		border-radius: .6rem
+	&.bs-0
+		&:hover
+			background-size: 0
+
+/* HEADER */
+
+/* NAV */
+nav
+	margin-bottom: 2rem
+
+/* SECTION */
+.section
+	&__main
+	&__left
+		background-color: $gray
+		padding-top: 1rem
+		padding-bottom: 1rem
+	&__content
+		padding-top: 1rem
+		padding-bottom: 1rem
+
+/* FOOTER */
+footer
+	margin-top: 2rem
