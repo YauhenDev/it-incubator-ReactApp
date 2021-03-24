@@ -9,6 +9,7 @@ npm install
 or
 
 npm install bootstrap@next
+
 npm install node-sass -S
 
 ## Available Scripts

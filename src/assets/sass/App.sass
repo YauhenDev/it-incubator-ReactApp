@@ -29,6 +29,10 @@ a
 /* NAV */
 nav
 	margin-bottom: 2rem
+	.nav-link
+		&.active
+			text-decoration: none
+			background-size: 100% 1px
 
 
 /* SECTION */
@@ -38,6 +42,16 @@ nav
 		background-color: $gray
 		padding-top: 1rem
 		padding-bottom: 1rem
+		.list-group
+			padding-left: unset
+			padding-right: unset
+			.list-group-item
+				a
+					display: block
+				&.active
+					a
+						color: $white
+
 	&__content
 		padding-top: 1rem
 		padding-bottom: 1rem

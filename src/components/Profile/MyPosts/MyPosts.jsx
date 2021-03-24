@@ -5,7 +5,7 @@ import Post from './Post/Post'
 const MyPost = () => {
 	return (
 		<>
-			<div className="col-12 col-lg-10 section__content">
+			
 				<div>myPost</div>
 
 				<div className="section__addPost">
@@ -47,7 +47,6 @@ const MyPost = () => {
 					likeCounts="33"
 				/>
 
-			</div>
 		</>
 	);
 }
