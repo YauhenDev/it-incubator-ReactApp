@@ -3,14 +3,18 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // import '../node_modules/bootstrap/scss/bootstrap.scss'
 import './assets/sass/App.sass'
-import Navbar from './components/Navbar/Navbar'
 
-import Home from './components/Home'
-import Dialogs from './components/Dialogs/Dialogs'
-import Profile from './components/Profile/Profile'
+import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 
-const App = () => (
+import Home from './components/Home'
+import Profile from './components/Profile/Profile'
+import Dialogs from './components/Dialogs/Dialogs'
+
+const App = (props) => {
+
+	return (
+
 	<>
 		<Router>
 			<Navbar />
@@ -20,9 +24,21 @@ const App = () => (
 					<div className="row">
 
 						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/profile" component={Profile} />
-							<Route path="/dialogs" component={Dialogs} />
+							<Route exact path="/" 
+								   component={Home} />
+							<Route path="/profile" 
+									render={ () => 
+									<Profile 
+										//posts={props.state.profilePage.posts} 
+										state={props.state.profilePage}
+									/> } />
+							<Route path="/dialogs" 
+								   render={ () => 
+								   <Dialogs 
+								   		//dialogs={props.state.dialogsPage.dialogs}
+										//messages={props.state.dialogsPage.messages} 
+										state={props.state.dialogsPage}
+									/> } />
 						</Switch>
 
 					</div>
@@ -32,6 +48,9 @@ const App = () => (
 			<Footer />
 		</Router>
 	</>
-);
+
+	);
+
+}
 
 export default App;

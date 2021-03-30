@@ -13,11 +13,11 @@ const Post = (props) => {
 				<div className="card-body">
 				<img src="../assets/img/ava.jpg" className="card-img-top float-start" alt="..." />
 					<p className="card-text">
-						{props.name}<br />
-						Post {props.message}
+						{/* {props.name}<br /> */}
+						{props.message}
 					</p>
 					<div className="card__like">
-						<span className="float-start">{props.likeCounts}</span>
+						<span className="float-start">{props.likeCount}</span>
 						<img src={svgLike} className="float-start" alt="like" />
 						<a href="/" title="Like">Like</a>
 					</div>

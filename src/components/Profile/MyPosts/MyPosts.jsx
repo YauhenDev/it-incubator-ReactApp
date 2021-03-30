@@ -2,53 +2,47 @@
 import React from 'react';
 import Post from './Post/Post'
 
-const MyPost = () => {
+const MyPosts = (props) => {
+	
+	let postsElements = 
+		props.posts.map( p => <Post 
+		key={p.id}  
+		message={p.message} 
+		likeCount={p.likesCount} 
+		/> );
+	
 	return (
 		<>
-			
-				<div>myPost</div>
 
-				<div className="section__addPost">
+			<div>myPost</div>
 
-					<div className="form-floating">
-						<textarea
-							className="form-control"
-							placeholder="add Post"
-							id="helpTextarea"
-						>
-						</textarea>
-						<label
-							htmlFor="helpTextarea">
-							add Post
+			<div className="section__addPost">
+
+				<div className="form-floating">
+					<textarea
+						className="form-control"
+						placeholder="add Post"
+						id="helpTextarea"
+					>
+					</textarea>
+					<label
+						htmlFor="helpTextarea">
+						add Post
 						</label>
-					</div>
-					<div className="d-md-flex justify-content-md-end">
-						<button
-							type="button"
-							className="btn btn-dark">
-							Add post
-						</button>
-					</div>
 				</div>
+				<div className="d-md-flex justify-content-md-end">
+					<button
+						type="button"
+						className="btn btn-dark">
+						Add post
+						</button>
+				</div>
+			</div>
 
-				<Post
-					name="Марьяна"
-					message="1"
-					likeCounts="55"
-				/>
-				<Post
-					name="Данила"
-					message="2"
-					likeCounts="44"
-				/>
-				<Post
-					name="Евген"
-					message="3"
-					likeCounts="33"
-				/>
+			{ postsElements }
 
 		</>
 	);
 }
 
-export default MyPost;
+export default MyPosts;

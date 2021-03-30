@@ -1,23 +1,23 @@
 //RCC выбрать структуру
-import React from 'react';
-import MyPosts from '../Profile/MyPosts/MyPosts'
+import React from 'react'
 
-const Profile = () => {
+import MyPosts from '../Profile/MyPosts/MyPosts'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
+
+const Profile = (props) => {
+//debugger;
+
 	return (
 		<>
 			<div className="col-12">
 				<h1>Профиль</h1>
 			</div>
-			<div className="col-12 col-lg-2 section__left">
-				<img
-					src="/assets/img/ava.jpg"
-					alt=""
-					className="img-fluid"
-				/>
-					description
+			<div className="col-12 col-lg-3 section__left">
+				<ProfileInfo />
 			</div>
-			<div className="col-12 col-lg-10 section__content">
-				<MyPosts />
+			<div className="col-12 col-lg-9 section__content">
+				{/* <MyPosts posts={posts} /> */}
+				<MyPosts posts={props.state.posts} />
 			</div>
 		</>
 	);
