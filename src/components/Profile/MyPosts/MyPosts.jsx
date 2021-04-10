@@ -11,6 +11,19 @@ const MyPosts = (props) => {
 		likeCount={p.likesCount} 
 		/> );
 	
+	let newPostElement = React.useRef();
+	
+	let addPost = () => {
+
+		//debugger;
+		//const text = document.getElementById('new-post').value
+		//alert(text);
+		let text = newPostElement.current.value;
+		//alert(text);
+		props.addPost(text);
+		newPostElement.current.value='';
+	}
+	
 	return (
 		<>
 
@@ -22,20 +35,24 @@ const MyPosts = (props) => {
 					<textarea
 						className="form-control"
 						placeholder="add Post"
-						id="helpTextarea"
+						id="new-post"
+						ref={newPostElement}
 					>
 					</textarea>
 					<label
-						htmlFor="helpTextarea">
+						htmlFor="new-post"
+					>
 						add Post
-						</label>
+					</label>
 				</div>
 				<div className="d-md-flex justify-content-md-end">
 					<button
 						type="button"
-						className="btn btn-dark">
+						className="btn btn-dark"
+						onClick={ addPost }
+					>
 						Add post
-						</button>
+					</button>
 				</div>
 			</div>
 

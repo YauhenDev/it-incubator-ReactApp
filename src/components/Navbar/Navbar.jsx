@@ -66,6 +66,26 @@ const Navbar = () => {
 								Settings
 							</Link>
 						</li>
+
+						<li className="nav-item">
+							<NavLink
+							className="nav-link" 
+							to="/test"
+							aria-current="page"
+							>
+								TestPage
+							 </NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+							className="nav-link" 
+							to="/testfetch"
+							aria-current="page"
+							>
+								TestFetch
+							 </NavLink>
+						</li>
+						
 					</ul>
 				</div>
 			</div>

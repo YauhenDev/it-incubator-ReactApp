@@ -26,10 +26,34 @@ const Dialogs = (props) => {
 			</div>
 			<div className="col-12 col-lg-9 section__content">
 
+
+				<div className="form-floating">
+					<textarea
+						className="form-control"
+						placeholder="add Post"
+						id="new-post"
+					>
+					</textarea>
+					<label
+						htmlFor="new-post"
+					>
+						add Post
+					</label>
+				</div>
+				<div className="d-md-flex my-4 justify-content-md-end">
+					<button
+						type="button"
+						className="btn btn-dark"
+					>
+						Add message
+					</button>
+				</div>
+
+
+
 				<div className="messages">
 					{ messagesElements }
 				</div>
-
 			</div>
 
 
